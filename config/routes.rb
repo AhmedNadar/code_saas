@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  root to: 'pages#home', via: :get
-
+  root to: 'pages#home'
 end
