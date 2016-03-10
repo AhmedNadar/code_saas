@@ -37,12 +37,14 @@
     >
 
   <div id="main-container" class="container">
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
     <div class="row">
       <div class="col-xs-3">
-      <div class="jumbotron">
-        <h3>Code SaaS</h3>
-      </div>
-
+        <div class="jumbotron">
+          <h3>Code SaaS</h3>
+        </div>
       </div>
       <div class="col-xs-9 well">
         <%= yield %>
