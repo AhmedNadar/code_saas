@@ -1,7 +1,6 @@
 # Code SaaS
-------------
 
-### Things I will cover:
+#### Things I will cover:
 
 * Bootstrap
 
@@ -9,6 +8,8 @@
 
 * Deployment to Heroku
 
-* Strip payments and subscription
+* Stripe payments and subscription
+
+* Authintication using Devise 
 
 * and more to come...
