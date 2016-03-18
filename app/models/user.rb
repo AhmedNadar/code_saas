@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :plan
+  has_one :profile
 
   # create customer using hidden field on the view page
   attr_accessor :stripe_card_token
