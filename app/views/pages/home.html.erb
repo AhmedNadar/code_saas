@@ -1,1 +1,23 @@
-<h1>Home</h1>
+<div class="jumbotron">
+  <h2>Home of Code SaaS</h2>
+  <h3>A membership where developer meets clients</h3>
+</div>
+<div class="row">
+<div class="col-md-6">
+  <div class="well">
+    <h2 class="text-center">Basic Membership</h2>
+    <h4>Join the community and enjoy getting together with your peers.</h4>
+    <p> <%= link_to "Join for Free", new_user_registration_path, class:"btn btn-primary btn-large btn-block" %>
+    </p>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="well">
+    <h2 class="text-center">Pro Membership</h2>
+    <h4>Enjoy full access to all community members for $10 a month.</h4>
+    <br>
+    <p> <%= link_to "Get Full Access", new_user_registration_path, class:"btn btn-success btn-large btn-block" %>
+    </p>
+  </div>
+</div>
+</div>
