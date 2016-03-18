@@ -23,15 +23,24 @@
             Code SaaS
           <% end %>
         </div>
+
+
+
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li>
-              <%= link_to "Home", root_path%>
-            </li>
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Contact", new_contact_path %></li>
           </ul>
+
+          <ul class="nav navbar-nav navbar-right hmenu">
+            <%= render 'devise/menu/registration_items' %>
+          </ul>
+
         </div><!--/.nav-collapse -->
+
+
+
+
       </div>
     </nav
     >
@@ -41,12 +50,13 @@
       <%= content_tag :div, value, class: "alert alert-#{key}" %>
     <% end %>
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col-xs-12">
         <div class="jumbotron">
-          <h3>Code SaaS</h3>
+          <h2>Home of Code SaaS</h2>
+          <h3>A membership where developer meets clients</h3>
         </div>
       </div>
-      <div class="col-xs-9 well">
+      <div class="col-xs-12">
         <%= yield %>
       </div>
     </div>

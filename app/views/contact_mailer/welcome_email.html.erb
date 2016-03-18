@@ -4,8 +4,8 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi there <%= "#{@name}" %></h1>
-    <p>You have received a message from <%= "#{@name}, #{@email}." %></p>
+    <h2>Message from: <%= "#{@name}" %></h2>
+    <p>You have received a message from: <strong><%= "#{@name}" with email: "#{@email}." %></strong></p>
     <p><%= @body %></p>
   </body>
 </html>
