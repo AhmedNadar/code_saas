@@ -5,4 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :plan
+  # create customer using hidden field on the view page
+  attr_accessor :stripe_card_token
+  # save user after is be created by stripe
+  def save_with_payment
+    if valid?
+      customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
+      self.stripe_customer_token = customer.id
+      save!
+    end
+  end
 end
