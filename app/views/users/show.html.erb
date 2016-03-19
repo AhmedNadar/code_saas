@@ -1,0 +1,25 @@
+<h3>This is <%= @user.profile.first_name %> Profile</h3>
+
+<%= @user.profile.first_name %>
+<br>
+<%= @user.profile.last_name %>
+<br>
+<%= @user.profile.job_title %>
+<br>
+
+
+<% if current_user.plan_id == 2 %>
+<!-- <p>
+In order to see all details you need to subscribe to
+<%= link_to "Pro plan", new_user_registration_path  %>
+</p>
+ -->
+  <%= @user.profile.phone_number %>
+  <br>
+  <%= @user.profile.contact_email %>
+  <br>
+<% end %>
+
+<%= @user.profile.location %>
+<br>
+<%= @user.profile.description %>
