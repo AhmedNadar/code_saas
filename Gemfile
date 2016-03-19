@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'stripe', '~> 1.36'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem "paperclip", "~> 4.3"
 
 group :development, :test do
   gem 'sqlite3'
