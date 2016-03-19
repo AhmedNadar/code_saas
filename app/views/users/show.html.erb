@@ -1,5 +1,6 @@
 <h3>This is <%= @user.profile.first_name %> Profile</h3>
-
+<%= image_tag @user.profile.avatar.url(:thumb) %>
+<br><br>
 <%= @user.profile.first_name %>
 <br>
 <%= @user.profile.last_name %>
@@ -23,3 +24,4 @@ In order to see all details you need to subscribe to
 <%= @user.profile.location %>
 <br>
 <%= @user.profile.description %>
+
