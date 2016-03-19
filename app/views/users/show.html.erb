@@ -1,27 +1,59 @@
-<h3>This is <%= @user.profile.first_name %> Profile</h3>
-<%= image_tag @user.profile.avatar.url(:thumb) %>
-<br><br>
-<%= @user.profile.first_name %>
-<br>
-<%= @user.profile.last_name %>
-<br>
-<%= @user.profile.job_title %>
-<br>
+<div class="row">
+  <div class="col-xs-3 text-center">
+    <%= image_tag @user.profile.avatar.url(:thumb), alt: "#{@user.profile.job_title}", title: "#{@user.profile.job_title}" %>
+  </div>
+
+  <div class="col-xs-9">
+    <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+    <h3>
+      <span class="job_title_icon"><%= job_title_icon %></span>
+      <%= @user.profile.job_title %>
+    </h3>
+
+    <p>
+      <i class="fa fa-globe"></i>
+      <%= @user.profile.location.capitalize %>
+    </p>
 
 
-<% if current_user.plan_id == 2 %>
-<!-- <p>
-In order to see all details you need to subscribe to
-<%= link_to "Pro plan", new_user_registration_path  %>
-</p>
- -->
-  <%= @user.profile.phone_number %>
-  <br>
-  <%= @user.profile.contact_email %>
-  <br>
-<% end %>
+    <% if current_user.plan_id == 1 %>
+        <p class="alert alert-success">
+        In order to see all details you need to subscribe to
+        <%= link_to "Pro plan", new_user_registration_path  %>
+        </p>
+    <% end %>
 
-<%= @user.profile.location %>
-<br>
-<%= @user.profile.description %>
+    <% if current_user.plan_id == 2 %>
 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-info"></i> Contact</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <i class="fa fa-phone"></i>
+          <%= @user.profile.phone_number %>
+        </p>
+        <p>
+          <i class="fa fa-envelope-o"></i>
+          <%= @user.profile.contact_email %>
+        </p>
+      </div>
+    </div>
+
+
+
+   <% end %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-file-text-o"></i> Description</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          <%= simple_format(@user.profile.description) %>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
