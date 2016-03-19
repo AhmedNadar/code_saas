@@ -11,8 +11,9 @@
     <div class="col-md-6">
       <div class="well">
         <% if current_user.profile %>
-          <%= link_to "Edit Profile", edit_user_profile_path(current_user)  %>
-          <%= link_to "View Profile", current_user %>
+          <p> <%= link_to "Edit Profile", edit_user_profile_path(current_user)  %></p>
+          <p><%= link_to "View Profile", current_user %></p>
+          <p><%= link_to "Community Members", users_path %></p>
         <% else %>
           <%= link_to "New Profile", new_user_profile_path(current_user) if current_user %>
         <% end %>
