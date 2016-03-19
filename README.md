@@ -2,14 +2,18 @@
 
 #### Things I will cover:
 
-* Bootstrap
+* Style with Bootstrap
 
-* Mailer with Sand Grid
+* Send mails using Mailer and Sand Grid
 
 * Deployment to Heroku
 
-* Stripe payments and subscription
+* Stripe payments and monthly subscription
 
 * Authintication using Devise 
+
+* Membership community page ofr paid users only
+
+* Build protfoil for each user
 
 * and more to come...
